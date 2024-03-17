@@ -82,13 +82,13 @@ function addRow() {
 }
 
 function save() {
-    const className = document.getElementById('className').value;
+    // const className = document.getElementById('className').value;
     const date = document.getElementById('date').value;
     const attendanceTable = document.getElementById('attendanceTable');
     const rows = attendanceTable.getElementsByTagName('tr');
     
     let csvContent = "data:text/csv;charset=utf-8,";
-    csvContent += "Class Name,Date,Student Name,Present\n";
+    csvContent += "Date,Student Name,Present\n";
     
     for (let i = 1; i < rows.length; i++) {
         const cells = rows[i].getElementsByTagName('td');
